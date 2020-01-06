@@ -1,0 +1,37 @@
+{
+  "name": "visdata-comp-cli",
+  "version": "1.0.5",
+  "description": "visdata自定义组件cli",
+  "main": "index.js",
+  "bin": {
+    "visComp": "./index.js"
+  },
+  "scripts": {
+    "init": "init"
+  },
+  "keywords": [
+    "visComp"
+  ],
+  "author": "cocolate",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "commander": "^4.0.1",
+    "download-git-repo": "^3.0.2",
+    "handlebars": "^4.5.3",
+    "inquirer": "^7.0.1",
+    "ora": "^4.0.3"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/oodavy41/visdataCompCli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/oodavy41/visdataCompCli/issues"
+  },
+  "homepage": "https://github.com/oodavy41/visdataCompCli#readme"
+}
