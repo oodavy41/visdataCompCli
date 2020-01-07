@@ -1,4 +1,4 @@
-# VisData Custom Componment Cli
+# VisData Custom Component Cli
 
 ## 自定义组件脚手架
 
@@ -6,7 +6,7 @@
 
 ```
 npm i visdata-comp-cli -g
-visComp init <componment-name(only)> [ -s <version> ][-b <branch>]
+visComp init <componment-name(only)> [ -s <version> ][-b <branch>][-w]
 cd <componment-name>
 npm insall
 ```

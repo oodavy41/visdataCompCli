@@ -8,8 +8,8 @@ const inquirer = require("inquirer");
 const ora = require("ora");
 
 const oraOpt = require("./progressAni");
-import onDownload from "./onDownload";
-import onWorkspace from "./onWorkspace";
+const onDownload = require("./onDownload");
+const onWorkspace = require("./onWorkspace");
 
 const templateUrl = "github:oodavy41/visdataCompTemplate";
 
@@ -21,14 +21,15 @@ cmder
   .option("-b --branch <string>", "branch of template", "master")
   .action((name, args) => {
     let gitUrl = `${templateUrl}#${args.branch}`;
-    let oraProcess = oraProcess.start(oraOpt);
+    let oraProcess = ora(oraOpt);
+    oraProcess.start();
     download(gitUrl, name, { clone: false }, err => {
       if (err) {
         oraProcess.fail("X_X");
         console.log(chalk.red("download fail:"), chalk.red(err));
       } else {
         oraProcess.succeed("^_^");
-        onDownload(name);
+        onDownload(name, args);
         onWorkspace(name, args);
         console.log(chalk.green("download success"));
       }
